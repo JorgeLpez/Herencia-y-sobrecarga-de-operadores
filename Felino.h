@@ -8,9 +8,11 @@ class Felino:public Mamifero
         string Circo;
 
     public:
+        Felino();
         Felino(string,int,string,string,string);
         void CambiarCirco(string);
         string getCirco();
+        void Imprimir();
 };
 
 #endif // FELINO_H
