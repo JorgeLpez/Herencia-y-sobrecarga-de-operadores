@@ -5,12 +5,22 @@
 class GatoDomestico:public Mamifero
 {
     private:
-        string Duenio;
+        string Duenio,Nombre;
 
     public:
-        GatoDomestico(string,int,string,string,string);
+        GatoDomestico(string,int,string,string,string,string);
+        string getDuenio();
         string getNombre();
         void CambiarNom(string);
+        void Imprimir();
+        //Sobrecarga de operadores
+        GatoDomestico& operator+(GatoDomestico&);
+        bool operator==(GatoDomestico&);
+        bool operator!=(GatoDomestico&);
+        bool operator<(GatoDomestico&);
+        bool operator>(GatoDomestico&);
+
+
 };
 
 #endif // GATODOMESTICO_H
