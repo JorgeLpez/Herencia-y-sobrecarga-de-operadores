@@ -1,3 +1,6 @@
+#include <iostream>
+#include<locale.h>
+#include"Mamifero.h"
 #include"Felino.h"
 #include"GatoDomestico.h"
 
