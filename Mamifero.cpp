@@ -8,6 +8,22 @@ Mamifero::Mamifero(string Dieta,int Anio,string LugarNac,string Raza)
     this->Raza=Raza;
 }
 
+Mamifero::Mamifero(const Mamifero& F)
+{
+    Dieta=F.Dieta;
+    Anio=F.Anio;
+    LugarNac=F.LugarNac;
+    Raza=F.Raza;
+}
+
+Mamifero::Mamifero(Mamifero&& F)noexcept
+{
+    Dieta=F.Dieta;
+    Anio=F.Anio;
+    LugarNac=F.LugarNac;
+    Raza=F.Raza;
+}
+
 string Mamifero::getDieta()
 {
     return Dieta;
@@ -18,16 +34,25 @@ string Mamifero::getRaza()
     return Raza;
 }
 
-void Mamifero::Nacimiento()
+string Mamifero::getLugarNac()
 {
-    cout<<"\nLugar nacimiento: "<<LugarNac;
-    cout<<"\nAño: "<<Anio<<endl<<endl;
+    return LugarNac;
+}
+
+int Mamifero::getAnio()
+{
+    return Anio;
+}
+
+int Mamifero::getEdad()
+{
+    return (2023-Anio);
 }
 
 void Mamifero::Imprimir()
 {
-    cout<<"Dieta: "<<Dieta<<endl;
-    cout<<"Lugar de Nacimiento: "<<LugarNac<<endl;
-    cout<<"Año: "<<Anio<<endl;
-    cout<<"Raza: "<<Raza<<endl<<endl;
+    cout<<"Dieta: "<<getDieta()<<endl;
+    cout<<"Lugar de Nacimiento: "<<getLugarNac()<<endl;
+    cout<<"AÃ±o: "<<getAnio()<<endl;
+    cout<<"Raza: "<<getRaza()<<endl<<endl;
 }
